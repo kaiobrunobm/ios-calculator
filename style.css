@@ -10,14 +10,16 @@ body {
     display: flex;
     justify-content: center;
     background-color: grey;
+    gap: 14px;
 }
 .iphone {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
-    width: 380px;
-    height: 700px;
+    margin-bottom: 20px;
+    width: 428px;
+    height: 900px;
     border-radius: 50px;
     background-color: #050505;
     align-items: flex-end;
@@ -25,33 +27,36 @@ body {
 
 
 #result {
+    display: flex;
+    justify-content: flex-end;
     position: absolute;
-    top: 100px;
-    margin-right: 20px;
+    top: 218px;
+    margin-left: 55px;
     color: white;
     font-size: 100px;
-    font-weight: 100;
-    text-align: right;
-    width: 350px;
-    height: 120px;
+    font-weight: 300;
+    width: 330px;
+    overflow: hidden;
 }
 
 .calculator-btn {
     display: flex;
     align-items: space-between;
-    margin-bottom: 40px;
+    margin-bottom: 68px;
+    margin-left: 20.6px;
+    margin-right: 25.9px;
 }
 
 .btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 77px;
-    width: 77px;
+    height: 85px;
+    width: 85px;
     border-radius:50px;
     border: none;
     background: #323232;
-    font-size: 39px;
+    font-size: 40px;
     color: white;
     margin: 6px;
     cursor: pointer;
@@ -71,8 +76,7 @@ body {
 }
 
 #zero-btn {
-    width:170px;
-    padding-right: 89px;
+    width:190px;
 }
 
 #btn-top {
@@ -90,7 +94,7 @@ body {
     background: white;
     border-radius: 4px;
     position: absolute;
-    bottom: 50px;
+    bottom: -150px;
     left: 50%;
     transform: translateX(-50%);
 }
