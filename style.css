@@ -118,3 +118,9 @@ body {
     left: 3.7rem;
     bottom: 3rem;
 }
+
+@media (max-width: 768px) {
+    .portifolio-btn{
+        display: none;
+    }
+}
