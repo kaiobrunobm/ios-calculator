@@ -3,55 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <meta name="description" content="Portifolio of a Front End Student">
+    
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    
+
+    <!-- Link to CSS -->
     <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-    <title>IOS Calculator</title>
+    <title>IOS Calculator replica</title>
 </head>
 <body>
-    <div class="iphone">
-        <div class="calculator-btn">
-            <p id="result"></p>
-            <table>
-                <tr>
-                    <td><button class="btn" id="btn-top" onclick="clean()">c</button></td>
-                    <td><button class="btn" id="btn-top" style="font-size:32px">+/-</button></td>
-                    <td><button class="btn" id="btn-top" style="font-size:35px" onclick="insert('%')">%</button></td>
-                    <td><button class="btn" id="btn-right" onclick="insert('/')">÷</button></td>
-                </tr>
-                <tr>
-                    <td><button class="btn" onclick="insert('7')">7</button></td>
-                    <td><button class="btn" onclick="insert('8')">8</button></td>
-                    <td><button class="btn" onclick="insert('9')">9</button></td>
-                    <td><button class="btn" id="btn-right" onclick="insert('*')">×</button></td>
-                </tr>
-                <tr>
-                    <td><button class="btn" onclick="insert('4')">4</button></td>
-                    <td><button class="btn" onclick="insert('5')">5</button></td>
-                    <td><button class="btn" onclick="insert('6')">6</button></td>
-                    <td><button class="btn" id="btn-right" style="font-size:60px" onclick="insert('-')">-</button></td>
-                </tr>
-                <tr>
-                    <td><button class="btn" onclick="insert('1')">1</button></td>
-                    <td><button class="btn" onclick="insert('2')">2</button></td>
-                    <td><button class="btn" onclick="insert('3')">3</button></td>
-                    <td><button class="btn" id="btn-right"  onclick="insert('+')">+</button></td>
-                </tr>
-                <tr>
-                    <td colspan="2" ><button class="btn" id="zero-btn" onclick="insert('0')">0</button></td>
-                    <td><button class="btn" onclick="insert('.')" >.</button></td>
-                    <td><button class="btn" id="btn-right" class="btn" onclick="calculate()">=</button></td>
-                </tr>
-            </table>
-            <figure class="portifolio-btn">
-                <a href="https://kaiobrunobm.github.io/portfolio/"><i class='bx bx-left-arrow-alt bx-fade-left-hover back-btn' ></i></a>
-                <figcaption class="back-btn-caption">Portfolio</figcaption>
-            </figure>
-        </div>
-        <div class="bottom"></div>
-    </div>
 
-    <script src="index.js"></script>
+    HEADER
+    <header class="header" id="header">
+
+        <!-- Header logo -->
+        <h2 class="logo"><a href="https://kaiobrunobm.github.io/portfolio/" class="logo-big ">Portfolio</a> <span class="name-logo">Kaio Bruno Barbosa Magalhães</span></h2>
+
+                    <!-- Change language button -->
+                    <div class="multi-language">
+                        <div class="language-selected">
+                            <!-- When the language is selected change the flag in the page -->
+                        </div>
+                        
+                        <!-- Language options -->
+                        <ul>
+                        <li><a href="#" class="en"></a></li>
+                        <li><a href="#" class="br"></a></li>
+                        </ul>
+                        
+                        </div>
+
+            <!-- Theme changer button -->
+            <i class="ri-moon-line change-theme" id="dark-mode-btn"></i>
+    </header>
+
+    <!-- MAIN CONTENT -->
+        <main>
+            <h1>IOS Calculator replica</h1>
+            <section class="iphone">
+                <div class="calculator-btn">
+                    <p id="result"></p>
+                    <table>
+                        <tr>
+                            <td><button class="btn" id="btn-top" onclick="clean()">c</button></td>
+                            <td><button class="btn" id="btn-top" style="font-size:32px">+/-</button></td>
+                            <td><button class="btn" id="btn-top" style="font-size:35px" onclick="insert('%')">%</button></td>
+                            <td><button class="btn" id="btn-right" onclick="insert('/')">÷</button></td>
+                        </tr>
+                        <tr>
+                            <td><button class="btn" onclick="insert('7')">7</button></td>
+                            <td><button class="btn" onclick="insert('8')">8</button></td>
+                            <td><button class="btn" onclick="insert('9')">9</button></td>
+                            <td><button class="btn" id="btn-right" onclick="insert('*')">×</button></td>
+                        </tr>
+                        <tr>
+                            <td><button class="btn" onclick="insert('4')">4</button></td>
+                            <td><button class="btn" onclick="insert('5')">5</button></td>
+                            <td><button class="btn" onclick="insert('6')">6</button></td>
+                            <td><button class="btn" id="btn-right" style="font-size:60px" onclick="insert('-')">-</button></td>
+                        </tr>
+                        <tr>
+                            <td><button class="btn" onclick="insert('1')">1</button></td>
+                            <td><button class="btn" onclick="insert('2')">2</button></td>
+                            <td><button class="btn" onclick="insert('3')">3</button></td>
+                            <td><button class="btn" id="btn-right"  onclick="insert('+')">+</button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" ><button class="btn" id="zero-btn" onclick="insert('0')">0</button></td>
+                            <td><button class="btn" onclick="insert('.')" >.</button></td>
+                            <td><button class="btn" id="btn-right" class="btn" onclick="calculate()">=</button></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="iphone-bottom">
+                    <div class="line"></div>
+                </div>
+                
+            </section>
+        </main>
+
+        <!-- Social media buttons -->
+        <div class="social-medias">
+
+            <a href="https://www.instagram.com/kaiobrunodev/" target="_blank" class="social-media-itens">
+                <i class="ri-instagram-line"></i>
+            </a>
+
+            <a href="https://wa.me/5574988627737" target="_blank" class="social-media-itens">
+                <i class="ri-whatsapp-line"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/kaiobrunobm" target="_blank" class="social-media-itens">
+                <i class="ri-linkedin-fill"></i>
+            </a>
+
+            <a href="https://github.com/kaiobrunobm" target="_blank" class="social-media-itens">
+                <i class="ri-github-fill"></i>
+            </a>
+
+            <a href="mailto:bmkaiobruno@gmail.com" target="_blank" class="social-media-itens">
+                <i class="ri-mail-line"></i>
+            </a>
+
+            </div>
+
+
+    <footer class="footer">
+        <!-- Repository link -->
+        <p><a class="footer-text" href="https://github.com/kaiobrunobm/portifolio" target="_blank" >&copy; Designed & Built by Kaio Bruno</a></p>
+
+        <!-- Responsive footer social media -->
+        <div class="footer-social-media">
+
+            <a href="https://www.instagram.com/kaiobrunodev/" target="_blank" class="footer-social-media-itens">
+                <i class="ri-instagram-line"></i>
+            </a>
+
+            <a href="https://wa.me/5574988627737" target="_blank" class="footer-social-media-itens">
+                <i class="ri-whatsapp-line"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/kaiobrunobm" target="_blank" class="footer-social-media-itens">
+                <i class="ri-linkedin-fill"></i>
+            </a>
+
+            <a href="https://github.com/kaiobrunobm" target="_blank" class="footer-social-media-itens">
+                <i class="ri-github-fill"></i>
+            </a>
+
+            <a href="mailto:bmkaiobruno@gmail.com" target="_blank" class="footer-social-media-itens">
+                <i class="ri-mail-line"></i>
+            </a>
+
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script src="./js/headershadow.js"></script>
+    <script src="./js/language.js"></script>
+    <script src="./js/darktheme.js"></script>
+    <script src="./js/calculator.js"></script>
+
 </body>
 </html>
